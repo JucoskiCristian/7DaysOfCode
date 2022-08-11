@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+
+    <script>
+        let tentativas = 3
+        let escolha
+        let escolhas = []
+        let alvos = []
+        let alvo
+
+        const maximo = 10
+        const minimo = 1
+
+        while (tentativas != -1) {
+
+            if (tentativas == 0) {
+                alert(`Infelismente você nao acertou nenhuma das 3 Tentativas\n Suas Escolhas:${escolhas}\n Alvos Gerados: ${alvos}`)
+                break
+            } else {
+                alvo = Math.floor(Math.random() * (maximo - minimo + 1) + minimo)
+                escolha = prompt("Tente adivinhar o número que foi gerado entre 1 e 10!!!")
+
+                if (alvo == escolha) {
+                    alert(`PARABÉNS Você acertou o numero, que era : ${alvo}`)
+                    tentativas = -1
+                } else {
+                    alvos.push(alvo)
+                    escolhas.push(escolha)
+                    tentativas--
+
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
