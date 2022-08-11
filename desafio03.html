@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 03</title>
+
+    <script>
+        let back
+        let tecback
+        let tecfront
+        let full
+        let lista = []
+        let controle = 0
+
+        back = prompt("Qual area voce gostaria de seguir?\n 1 - Front-end\n 2 - Back-End")
+
+        if (back == 1) {
+            back = 'Front-End'
+        } else if (back == 2) {
+            back = 'Back-End'
+        }
+
+        if (back == 'Front-End') {
+            tecfront = prompt("Qual técnologia você gostaria de seguir?\n 1 - React\n 2 - Vue")
+            if (tecfront == 1) {
+                tecfront = 'React'
+            } else if (tecfront == 2) {
+                tecfront = 'Vue'
+            }
+
+        } else if (back == 'Back-End') {
+            tecback = prompt("Qual técnologia você gostaria de seguir?\n 1 - C#\n 2 - Java")
+            if (tecback == 1) {
+                tecback = 'C#'
+            } else if (tecback == 2) {
+                tecback = 'Java'
+            }
+        }
+
+        full = prompt("Gostaria de se especializar na area escolhida ou se tornar FullStack?\n 1 - Especializar\n 2 - FullStack")
+
+        if (full == 1) {
+            full = 'Especializar'
+            if (back == 'Front-End') {
+                alert(`Parabéns voce esolher se especializar, entao foque em aprender ${tecfront}`)
+            } else if (back == 'Back-End') {
+                alert(`Parabéns voce esolher se especializar, entao foque em aprender ${tecback}`)
+            }
+
+        } else if (full == 2) {
+            full = 'FullStack'
+            alert("Parabéns, Você escolheu ser FullStack, bora aprender back e front da melhor maneira possivel!")
+        }
+
+        while (controle !== 1) {
+            let tec = prompt('Digite as tecnologias você gostaria de se especializar ou conhecer ou digite "SAIR" para Finalizar')
+            if (tec.toUpperCase() == 'SAIR') {
+                controle = 1
+            } else {
+                lista.push(tec.toLocaleUpperCase())
+            }
+
+        }
+
+        //If de Front-End
+
+        if (back == 'Front-End' && tecfront == 'React' && full == 'Especializar') {
+            alert(`Parabéns Voce escolher ser Programdor ${back} e ultilizar de ${tecfront} e gostaria de se ${full}\n
+            Essa foram as tecnilogias que você citou que gostaria de aprender:\n
+            ${lista}`)
+        }
+
+        if (back == 'Front-End' && tecfront == 'React' && full == 'FullStack') {
+            alert(`Parabéns Voce escolher ser Programdor ${back} e ultilizar de ${tecfront} e gostaria de se tornar Programador ${full}\n
+            Essa foram as tecnilogias que você citou que gostaria de aprender:\n
+            ${lista}`)
+        }
+
+        if (back == 'Front-End' && tecfront == 'Vue' && full == 'Especializar') {
+            alert(`Parabéns Voce escolher ser Programdor ${back} e ultilizar de ${tecfront} e gostaria de se ${full}\n
+            Essa foram as tecnilogias que você citou que gostaria de aprender:\n
+            ${lista}`)
+        }
+
+        if (back == 'Front-End' && tecfront == 'Vue' && full == 'FullStack') {
+            alert(`Parabéns Voce escolher ser Programdor ${back} e ultilizar de ${tecfront} e gostaria de se tornar Programador ${full}\n
+            Essa foram as tecnilogias que você citou que gostaria de aprender:\n
+            ${lista}`)
+        }
+
+        //If de Back-End
+
+        if (back == 'Back-End' && tecback == 'C#' && full == 'Especializar') {
+            alert(`Parabéns Voce escolher ser Programdor ${back} e ultilizar de ${tecback} e gostaria de se ${full}\n
+            Essa foram as tecnilogias que você citou que gostaria de aprender:\n
+            ${lista}`)
+        }
+
+        if (back == 'Back-End' && tecback == 'C#' && full == 'FullStack') {
+            alert(`Parabéns Voce escolher ser Programdor ${back} e ultilizar de ${tecback} e gostaria de se tornar Programador ${full}\n
+            Essa foram as tecnilogias que você citou que gostaria de aprender:\n
+            ${lista}`)
+        }
+
+        if (back == 'Back-End' && tecback == 'Java' && full == 'Especializar') {
+            alert(`Parabéns Voce escolher ser Programdor ${back} e ultilizar de ${tecback} e gostaria de se ${full}\n
+            Essa foram as tecnilogias que você citou que gostaria de aprender:\n
+            ${lista}`)
+        }
+
+        if (back == 'Back-End' && tecback == 'Java' && full == 'FullStack') {
+            alert(`Parabéns Voce escolher ser Programdor ${back} e ultilizar de ${tecback} e gostaria de se tornar Programador ${full}\n
+            Essa foram as tecnilogias que você citou que gostaria de aprender:\n
+            ${lista}`)
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
