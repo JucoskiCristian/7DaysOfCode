@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 05</title>
+
+    <script>
+        let frutas = []
+        let laticinios = []
+        let congelados = []
+        let doces = []
+
+        while (true) {
+            let add = prompt('Deseja adicionar uma comida na sua lista?\n Digite SIM ou NAO')
+            if (add == 'sim') {
+                let categoria = prompt('Qual categoria essa comida se encaixa?\n Frutas \n Laticinios \n Congelados \n Doces')
+                
+                if(categoria == 'frutas'){
+                    frutas.push(prompt('Digite o nome da fruta'))
+                }
+                if(categoria == 'laticinios'){
+                    laticinios.push(prompt('Digite o nome do laticinio'))
+                }
+                if(categoria == 'congelados'){
+                    congelados.push(prompt('Digite o nome do Congelado'))
+                }
+                if(categoria == 'doces'){
+                    doces.push(prompt('Digite o nome do Doce'))
+                }
+
+            } else if (add == 'nao') {
+                break
+            }
+        }
+
+        alert(`Lista de Compras:\n Frutas: ${frutas}\n Laticínios: ${laticinios}\n Congelados: ${congelados}\n Doces: ${doces} `)
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
