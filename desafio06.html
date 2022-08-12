@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 06</title>
+
+    <script>
+        let frutas = []
+        let laticinios = []
+        let congelados = []
+        let doces = []
+        let add
+        let controle = true
+
+        while (controle) {
+            if (frutas.length != 0 || laticinios.length != 0 || congelados.length != 0 || doces.length != 0) {
+                add = prompt('Deseja adicionar uma comida na sua lista?\n Digite SIM ou NAO \n Caso queira remover algum item Digite REMOVER')
+            } else {
+                add = prompt('Deseja adicionar uma comida na sua lista?\n Digite SIM ou NAO')
+            }
+            switch (add) {
+                case 'sim':
+                    let categoria = prompt('Qual categoria essa comida se encaixa?\n Frutas \n Laticinios \n Congelados \n Doces')
+
+                    if (categoria == 'frutas') {
+                        frutas.push(prompt('Digite o nome da fruta'))
+                    }
+                    if (categoria == 'laticinios') {
+                        laticinios.push(prompt('Digite o nome do laticinio'))
+                    }
+                    if (categoria == 'congelados') {
+                        congelados.push(prompt('Digite o nome do Congelado'))
+                    }
+                    if (categoria == 'doces') {
+                        doces.push(prompt('Digite o nome do Doce'))
+                    }
+                    break
+
+                case 'nao':
+                    controle = false
+                    break
+
+                case 'remover':
+                    let remover = prompt(`Lista de Compras:\n Frutas: ${frutas}\n Laticínios: ${laticinios}\n Congelados: ${congelados}\n Doces: ${doces}\n
+                    Qual elemento quer remover?`)
+                    console.log(frutas.includes(remover))
+
+                    if (frutas.includes(remover) == true) {
+                        frutas.splice(frutas.indexOf(remover), 1)
+                        alert(`Lista de Compras:\n Frutas: ${frutas}\n Laticínios: ${laticinios}\n Congelados: ${congelados}\n Doces: ${doces} `)
+
+                    } else if (laticinios.includes(remover) == true) {
+                        laticinios.splice(laticinios.indexOf(remover), 1)
+                        alert(`Lista de Compras:\n Frutas: ${frutas}\n Laticínios: ${laticinios}\n Congelados: ${congelados}\n Doces: ${doces} `)
+
+                    } else if (congelados.includes(remover) == true) {
+                        congelados.splice(congelados.indexOf(remover), 1)
+                        alert(`Lista de Compras:\n Frutas: ${frutas}\n Laticínios: ${laticinios}\n Congelados: ${congelados}\n Doces: ${doces} `)
+
+                    } else if (doces.includes(remover) == true) {
+                        doces.splice(doces.indexOf(remover), 1)
+                        alert(`Lista de Compras:\n Frutas: ${frutas}\n Laticínios: ${laticinios}\n Congelados: ${congelados}\n Doces: ${doces} `)
+
+                    }else {
+                        alert("Item Não Encontrado")
+                    }
+
+                    break
+            }
+        }
+
+        alert(`Lista de Compras:\n Frutas: ${frutas}\n Laticínios: ${laticinios}\n Congelados: ${congelados}\n Doces: ${doces} `)
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
