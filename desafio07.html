@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07</title>
+
+    <script>
+        let controle = true
+        let numero1
+        let numero2
+        let opcao
+
+        function soma(numero1, numero2) {
+            return alert(`A soma de ${numero1} e de ${numero2} é: ` + (parseInt(numero1) + parseInt(numero2)))
+        }
+
+        function subtracao(numero1, numero2) {
+            return alert(`A Subtração de ${numero1} e de ${numero2} é: ` + (parseInt(numero1) - parseInt(numero2)))
+        }
+
+        function divivao(numero1, numero2) {
+            return alert(`A soma de ${numero1} e de ${numero2} é: ` + (parseInt(numero1) / parseInt(numero2)))
+        }
+
+        function multiplicacao(numero1, numero2) {
+            return alert(`A Subtração de ${numero1} e de ${numero2} é: ` + (parseInt(numero1) * parseInt(numero2)))
+        }
+
+        while (controle) {
+            opcao = prompt('Digite a operação desejada:\n 1 - Soma\n 2 - Subtração\n 3 - Divisão\n 4 - Multiplicação\n 5 - SAIR')
+
+            switch (opcao) {
+                case '1':
+                    numero1 = prompt('Digite o primeiro Valor:')
+                    numero2 = prompt('Digite o segundo Valor:')
+                    soma(numero1, numero2)
+                    break;
+
+                case '2':
+                    numero1 = prompt('Digite o primeiro Valor:')
+                    numero2 = prompt('Digite o segundo Valor:')
+                    subtracao(numero1, numero2)
+                    break;
+
+                case '3':
+                    numero1 = prompt('Digite o primeiro Valor:')
+                    numero2 = prompt('Digite o segundo Valor:')
+                    divivao(numero1, numero2)
+                    break;
+
+                case '4':
+                    numero1 = prompt('Digite o primeiro Valor:')
+                    numero2 = prompt('Digite o segundo Valor:')
+                    multiplicacao(numero1, numero2)
+                    break;
+
+                case '5':
+                    controle = false
+                    break;
+
+                default:
+                    alert('valor invalido')
+                    break;
+            }
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
